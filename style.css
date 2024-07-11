@@ -1,0 +1,26 @@
+body {
+    background-color: #0f172a;
+    color: white;
+    font-family: "Archivo Black", sans-serif;
+    font-style: normal;
+}  
+
+h1 {
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.game-button {
+    background-color: #ff00d8;
+    color: white;
+    border-radius: 15px;
+    border-color: #ff00d8;
+    border: none;
+    padding: 1%;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+    margin-top: 1%;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+}
