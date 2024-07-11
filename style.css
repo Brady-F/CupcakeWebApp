@@ -6,15 +6,15 @@ body {
 }  
 
 h1 {
-    font-size: 70px;
+    font-size: 60px;
     font-weight: 900;
 }
 
 .game-button {
     background-color: #ff00d8;
     color: white;
-    font-size: 50px;
-    font-weight: 700;
+    font-size: 35px;
+    font-weight: 600;
     border-radius: 25px;
     border-color: #ff00d8;
     border: none;
