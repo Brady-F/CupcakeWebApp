@@ -23,20 +23,14 @@
                 justify-content: center;
                 height: 100%;
             }
-            #gameWrapper {
+            #gameFrame {
                 position: absolute;
                 top: 0;
                 left: 0;
                 width: 100%;
                 height: 100%;
-                display: none;
-                justify-content: center;
-                align-items: center;
-                overflow: hidden;
-            }
-            #gameFrame {
                 border: none;
-                transform-origin: 0 0; /* Scale transform origin */
+                display: none;
             }
         </style>
     </head>
@@ -48,11 +42,9 @@
                     <button id = "gorilla" class="game-button" type="button" onclick="playGorilla()">Play Gorilla Jump</button>
                     <button id = "moutai" class="game-button" type="button" onclick="playMoutai()">Play Moutai Shots</button>
                 </div>
-                <p>v0.0.3</p>
+                <p>v0.0.4</p>
             </div>
-            <div id="gameWrapper">
-                <iframe id="gameFrame"></iframe>
-            </div>
+            <iframe id="gameFrame"></iframe>
         </body>
     </center>
 </html>
