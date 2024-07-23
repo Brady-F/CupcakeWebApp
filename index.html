@@ -8,14 +8,41 @@
     <head>
         <title>Cupcake</title>
         <link rel="stylesheet" href="style.css">
+        <style>
+            body, html {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+            }
+            #mainUI {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+            }
+            #gameFrame {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border: none;
+                display: none;
+            }
+        </style>
     </head>
     <center>
         <body>
-            <h1>Cupcake on Telegram</h1>
-            <div>
-                <button id = "gorilla" class="game-button" type="button" onclick="playGorilla()">Play Gorilla Jump</button>
-                <button id = "moutai" class="game-button" type="button" onclick="playMoutai()">Play Moutai Shots</button>
+            <div id="mainUI">
+                <h1>Cupcake on Telegram</h1>
+                <div>
+                    <button id = "gorilla" class="game-button" type="button" onclick="playGorilla()">Play Gorilla Jump</button>
+                    <button id = "moutai" class="game-button" type="button" onclick="playMoutai()">Play Moutai Shots</button>
+                </div>
             </div>
+            <iframe id="gameFrame"></iframe>
         </body>
     </center>
 </html>
