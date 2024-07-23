@@ -13,6 +13,15 @@ function playGame(url){
     gameFrame.src = url;
     mainUI.style.display = 'none';
     gameFrame.style.display = 'block';
+
+    adjustIframeSize();
+    window.addEventListener('resize', adjustIframeSize);
+}
+
+function adjustIframeSize() {
+    const gameFrame = document.getElementById('gameFrame');
+    gameFrame.style.width = `${window.innerWidth}px`;
+    gameFrame.style.height = `${window.innerHeight}px`;
 }
 
 function closeGame(){
