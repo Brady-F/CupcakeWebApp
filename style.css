@@ -3,7 +3,7 @@ body {
     color: white;
     font-family: "Archivo Black", sans-serif;
     font-style: normal;
-}  
+}
 
 h1 {
     font-size: 50px;
@@ -17,10 +17,11 @@ h1 {
     background-color: #ff00d8;
     color: white;
     display: block;
-    width: 100%; /* Adjust width to fit container */
+    width: 80%; /* Adjust width to fit container */
     max-width: 300px; /* Set a maximum width for larger screens */
     margin: 20px auto; /* Center buttons with margin */
     padding: 15px 10px;
+    font-size: 1.5em; /* Adjust font size */
     text-align: center;
     border: none;
     cursor: pointer;
@@ -35,7 +36,7 @@ h1 {
 /* Responsive adjustments */
 @media (max-width: 600px) {
     .game-button {
-        font-size: 1em; /* Slightly smaller font size on small screens */
+        font-size: 1.2em; /* Slightly smaller font size on small screens */
         padding: 12px 8px; /* Adjust padding for smaller screens */
     }
 }

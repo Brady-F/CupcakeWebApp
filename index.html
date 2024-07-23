@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script type="text/javascript" src="script.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,6 +23,7 @@
                 align-items: center;
                 justify-content: center;
                 height: 100%;
+                text-align: center;
             }
             #gameFrame {
                 position: absolute;
@@ -39,10 +41,10 @@
             <div id="mainUI">
                 <h1>Cupcake on Telegram</h1>
                 <div>
-                    <button id = "gorilla" class="game-button" type="button" onclick="playGorilla()">Play Gorilla Jump</button>
-                    <button id = "moutai" class="game-button" type="button" onclick="playMoutai()">Play Moutai Shots</button>
+                    <button id="gorilla" class="game-button" type="button" onclick="playGorilla()">Play Gorilla Jump</button>
+                    <button id="moutai" class="game-button" type="button" onclick="playMoutai()">Play Moutai Shots</button>
                 </div>
-                <p>v0.0.4</p>
+                <p>v0.0.5</p>
             </div>
             <iframe id="gameFrame"></iframe>
         </body>
