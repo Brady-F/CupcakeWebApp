@@ -15,6 +15,7 @@ function openGame(gameUrl) {
     gameFrame.style.display = 'flex';
     gameFrame.style.width = '100%';
     gameFrame.style.height = '100%';
+    window.Telegram.WebApp.expand();
 }
 
 function closeGame(){
