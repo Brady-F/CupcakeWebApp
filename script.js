@@ -1,27 +1,43 @@
 function playGorilla(){
-    playGame("https://cakerilla-static.pages.dev/");
+    openGame("https://cakerilla-static.pages.dev/");
 }
 
 function playMoutai(){
     window.Telegram.WebApp.sendData('test moutai')
 }
 
-function playGame(url){
+function openGame(gameUrl) {
     const mainUI = document.getElementById('mainUI');
+    const gameWrapper = document.getElementById('gameWrapper');
     const gameFrame = document.getElementById('gameFrame');
 
-    gameFrame.src = url;
     mainUI.style.display = 'none';
-    gameFrame.style.display = 'block';
+    gameWrapper.style.display = 'flex';
+    gameFrame.src = gameUrl;
 
+    // Adjust the iframe size and scale to fit the window
     adjustIframeSize();
     window.addEventListener('resize', adjustIframeSize);
 }
 
 function adjustIframeSize() {
+    const gameWrapper = document.getElementById('gameWrapper');
     const gameFrame = document.getElementById('gameFrame');
-    gameFrame.style.width = `${window.innerWidth}px`;
-    gameFrame.style.height = `${window.innerHeight}px`;
+
+    const aspectRatio = 16 / 9; // Example aspect ratio
+    const wrapperWidth = gameWrapper.clientWidth;
+    const wrapperHeight = gameWrapper.clientHeight;
+
+    let scale;
+    if (wrapperWidth / wrapperHeight > aspectRatio) {
+        scale = wrapperHeight / (wrapperWidth / aspectRatio);
+    } else {
+        scale = wrapperWidth / (wrapperHeight * aspectRatio);
+    }
+
+    gameFrame.style.width = `${wrapperWidth}px`;
+    gameFrame.style.height = `${wrapperHeight}px`;
+    gameFrame.style.transform = `scale(${scale})`;
 }
 
 function closeGame(){
