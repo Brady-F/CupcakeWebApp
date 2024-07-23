@@ -16,16 +16,28 @@ h1 {
     font-weight: 200;
     background-color: #ff00d8;
     color: white;
-    font-size: 25px;
-    border-color: #ff00d8;
+    display: block;
+    width: 100%; /* Adjust width to fit container */
+    max-width: 300px; /* Set a maximum width for larger screens */
+    margin: 20px auto; /* Center buttons with margin */
+    padding: 15px 10px;
+    text-align: center;
     border: none;
-    padding: 5%;
-    padding-left: 5.5%;
-    padding-right: 5.5%;
-    margin-top: 15%;
-    flex-direction: column;
-    display: flex;
-    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for buttons */
+.game-button:hover {
+    background-color: #cc00cc; /* Darker background color on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .game-button {
+        font-size: 1em; /* Slightly smaller font size on small screens */
+        padding: 12px 8px; /* Adjust padding for smaller screens */
+    }
 }
 
 #gorilla {
