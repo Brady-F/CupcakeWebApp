@@ -32,6 +32,6 @@ window.addEventListener('message', function(event) {
     // You can add custom logic here based on the message content
     if(event.data.command == "game_result"){
         //closeGame();
-        window.Telegram.WebApp.sendData(JSON.stringify({"command:": event.data.command, "score": event.data.result.value}))
+        window.Telegram.WebApp.sendData(event.data.command+";"+event.data.result.value)
     }
 });
