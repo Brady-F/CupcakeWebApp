@@ -24,20 +24,20 @@ function adjustIframeSize() {
     const gameWrapper = document.getElementById('gameWrapper');
     const gameFrame = document.getElementById('gameFrame');
 
-    const aspectRatio = 16 / 9; // Example aspect ratio
     const wrapperWidth = gameWrapper.clientWidth;
     const wrapperHeight = gameWrapper.clientHeight;
 
-    let scale;
-    if (wrapperWidth / wrapperHeight > aspectRatio) {
-        scale = wrapperHeight / (wrapperWidth / aspectRatio);
-    } else {
-        scale = wrapperWidth / (wrapperHeight * aspectRatio);
-    }
-
     gameFrame.style.width = `${wrapperWidth}px`;
     gameFrame.style.height = `${wrapperHeight}px`;
+
+    // Calculate the scale factor to fit the iframe content within the wrapper
+    const scaleWidth = wrapperWidth / gameFrame.contentWindow.document.body.scrollWidth;
+    const scaleHeight = wrapperHeight / gameFrame.contentWindow.document.body.scrollHeight;
+
+    const scale = Math.min(scaleWidth, scaleHeight);
+
     gameFrame.style.transform = `scale(${scale})`;
+    gameFrame.style.transformOrigin = 'top left';
 }
 
 function closeGame(){
