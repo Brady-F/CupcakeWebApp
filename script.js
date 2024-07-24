@@ -1,5 +1,5 @@
 function playGorilla(){
-    openGame("https://cupcake-v2-git-dev-bj-studios.vercel.app/telegram-embed");
+    openGame("https://cakerilla-static.pages.dev/");
 }
 
 function playMoutai(){
