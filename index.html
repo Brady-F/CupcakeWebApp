@@ -44,9 +44,12 @@
                     <button id="gorilla" class="game-button" type="button" onclick="playGorilla()">Play Gorilla Jump</button>
                     <button id="moutai" class="game-button" type="button" onclick="playMoutai()">Play Moutai Shots</button>
                 </div>
-                <p>v0.0.9</p>
+                <p>v0.1.0</p>
             </div>
-            <iframe id="gameFrame"></iframe>
+            <iframe id="gameFrame" className={clsx(
+                `md:aspect-[1/2] h-screen-minus-header w-full max-w-full`
+              )}
+              sandbox="allow-forms allow-scripts allow-same-origin allow-popups"></iframe>
         </body>
     </center>
 </html>
