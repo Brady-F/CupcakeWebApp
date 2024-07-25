@@ -39,6 +39,9 @@ window.addEventListener('message', function(event) {
 });
 
 window.addEventListener("beforeunload", function(event){
-    window.Telegram.WebApp.sendData("window_closed")
+    window.Telegram.WebApp.sendData("window_closed");
  });
     
+window.onbeforeunload = function(event) {
+    window.Telegram.WebApp.sendData("window_closed");
+};
