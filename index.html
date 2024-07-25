@@ -34,6 +34,14 @@
                 border: none;
                 display: none;
             }
+            #referUI {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                text-align: center;
+            }
         </style>
     </head>
     <center>
@@ -49,7 +57,17 @@
             <iframe id="gameFrame" className={clsx(
                 `md:aspect-[1/2] h-screen-minus-header w-full max-w-full`
               )}
-              sandbox="allow-forms allow-scripts allow-same-origin allow-popups"></iframe>
+              sandbox="allow-forms allow-scripts allow-same-origin allow-popups">
+            </iframe>
+            <div id="referUI">
+                <h1>Cupcake on Telegram</h1>
+                <div>
+                    <h3 id="referText">You scored 0! Refer friends or register to play more games!</h3>
+                    <button id="refer" class="game-button" type="button" onclick="referFriends()">Refer Friends!</button>
+                    <button id="register" class="game-button" type="button" onclick="registerCupcake()">Register on Cupcake.com</button>
+                </div>
+                <p>v0.1.0</p>
+            </div>
         </body>
     </center>
 </html>
