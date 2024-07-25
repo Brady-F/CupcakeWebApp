@@ -38,7 +38,7 @@ function closeGame(score){
 }
 
 function referFriends(){
-    window.open("tg://msg_url?url=https://t.me/CupcakeTestBot?start="+referralCode+"3&text=My%20high%20score%20is%200!%20Play%20Cupcake%20and%20try%20to%20beat%20me.")
+    window.open("http://t.me/share/url?url=https://t.me/CupcakeTestBot?start="+referralCode+"3&text=My%20high%20score%20is%200!%20Play%20Cupcake%20and%20try%20to%20beat%20me.")
 }
 
 function registerCupcake(){
