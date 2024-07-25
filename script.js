@@ -1,9 +1,3 @@
-var mongo = require('mongodb');
-
-const queryString = window.location.search;
-const params = new URLSearchParams(queryString);
-const telegramId = params.get("id");
-
 function playGorilla(){
     openGame("https://cakerilla-static.pages.dev/");
 }
