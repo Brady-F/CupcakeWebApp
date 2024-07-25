@@ -1,3 +1,8 @@
+const urlParams = new URLSearchParams(window.location.search);
+const referralCode = urlParams.get('referral');
+
+console.log(referralCode);
+
 function playGorilla(){
     openGame("https://cakerilla-static.pages.dev/");
 }
@@ -9,8 +14,6 @@ function playMoutai(){
 function openGame(gameUrl) {
     const mainUI = document.getElementById('mainUI');
     const gameFrame = document.getElementById('gameFrame');
-    const referUI = document.getElementById('referUI');
-
 
     mainUI.style.display = 'none';
     gameFrame.src = gameUrl;
@@ -22,6 +25,8 @@ function openGame(gameUrl) {
 }
 
 function closeGame(score){
+    // If user has available games, allow them to play more
+    // If no games then bring them to referral UI
     const gameFrame = document.getElementById('gameFrame');
     const referUI = document.getElementById('referUI');
     const referText = document.getElementById('referText');
@@ -33,7 +38,7 @@ function closeGame(score){
 }
 
 function referFriends(){
-    window.open("tg://msg_url?url=https://t.me/CupcakeTestBot?start=ABC123&text=My%20high%20score%20is%200!%20Play%20Cupcake%20and%20try%20to%20beat%20me.")
+    window.open("tg://msg_url?url=https://t.me/CupcakeTestBot?start="+referralCode+"3&text=My%20high%20score%20is%200!%20Play%20Cupcake%20and%20try%20to%20beat%20me.")
 }
 
 function registerCupcake(){
@@ -47,7 +52,8 @@ window.addEventListener('message', function(event) {
     if(event.data.command == "game_result"){
         setTimeout(function() {
             closeGame(event.data.result.value);
-            window.Telegram.WebApp.sendData(event.data.command+";"+event.data.result.value)
+            //Sending data closes telegram web app
+            //window.Telegram.WebApp.sendData(event.data.command+";"+event.data.result.value)
         }, 2500);
     }
 });
