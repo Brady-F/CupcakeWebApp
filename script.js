@@ -4,7 +4,7 @@ const referralCode = urlParams.get('referral');
 console.log(referralCode);
 
 function playGorilla(){
-    openGame("https://70c3-76-247-13-82.ngrok-free.app/");
+    openGame("https://a005-76-247-13-82.ngrok-free.app/");
 }
 
 function playMoutai(){
