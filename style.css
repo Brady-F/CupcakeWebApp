@@ -3,6 +3,8 @@ body {
     color: white;
     font-family: "Archivo Black", sans-serif;
     font-style: normal;
+    margin-left: 3%;
+    margin-right: 3%;
 }
 
 h1 {
@@ -57,8 +59,8 @@ h1 {
 
 #refer {
     transform: rotate(5deg);
-    margin-top: 5%;
-    margin-bottom: 5%;
+    margin-top: 8%;
+    margin-bottom: 8%;
 }
 
 #register {
