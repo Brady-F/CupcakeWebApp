@@ -8,7 +8,7 @@ function playGorilla(){
 }
 
 function playMoutai(){
-    openGame("http://localhost:51405/")
+    openGame("https://moutai-shots.s3.us-east-1.amazonaws.com/index.html")
 }
 
 function openGame(gameUrl) {
