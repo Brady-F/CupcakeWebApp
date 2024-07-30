@@ -4,7 +4,7 @@ const referralCode = urlParams.get('referral');
 console.log(referralCode);
 
 function playGorilla(){
-    openGame("https://a005-76-247-13-82.ngrok-free.app/");
+    openGame("https://brady-f.github.io/CakeBuild/");
 }
 
 function playMoutai(){
