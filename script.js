@@ -1,5 +1,6 @@
 const urlParams = new URLSearchParams(window.location.search);
 const referralCode = urlParams.get('referral');
+var currentScore = -1;
 
 console.log(referralCode);
 
@@ -27,6 +28,7 @@ function openGame(gameUrl) {
 function closeGame(score){
     // If user has available games, allow them to play more
     // If no games then bring them to referral UI
+    currentScore = score;
     const gameFrame = document.getElementById('gameFrame');
     const referUI = document.getElementById('referUI');
     const referText = document.getElementById('referText');
@@ -38,7 +40,7 @@ function closeGame(score){
 }
 
 function referFriends(){
-    window.open("http://t.me/share/url?url=https://t.me/CupcakeTestBot?start="+referralCode+"3&text=My%20high%20score%20is%200!%20Play%20Cupcake%20and%20try%20to%20beat%20me.")
+    window.open("http://t.me/share/url?url=https://t.me/CupcakeTestBot?start="+referralCode+"3&text=My%20high%20score%20is%20"+currentScore+"!%20Play%20Cupcake%20and%20try%20to%20beat%20me.")
 }
 
 function registerCupcake(){
